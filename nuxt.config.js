@@ -80,7 +80,10 @@ module.exports = {
     ['@nuxtjs/proxy'],
     [
       'nuxtjs-extensions/typescript',
-      { tsconfig: resolve(__dirname, 'client', 'tsconfig.json') }
+      {
+        tsconfig: resolve(__dirname, 'client', 'tsconfig.json'),
+        tslint: resolve(__dirname, 'tslint.json')
+      }
     ],
     [
       'nuxtjs-extensions/vuetify',
