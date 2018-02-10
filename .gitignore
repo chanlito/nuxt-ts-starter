@@ -1,0 +1,14 @@
+# build files
+.nuxt
+build
+dist
+server/build
+
+# enviroment variables
+.env
+
+# dependencies
+node_modules
+
+# logs
+npm-debug.log

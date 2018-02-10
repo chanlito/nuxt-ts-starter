@@ -1,0 +1,22 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    ".vscode": true,
+    "node_modules": true
+  },
+  "prettier.eslintIntegration": true,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "indent_size": 2,
+      "end_with_newline": false,
+      "wrap_attributes": "force-aligned",
+      "wrap_attributes_indent_size": 2,
+      "editorconfig": true
+    }
+  }
+}
