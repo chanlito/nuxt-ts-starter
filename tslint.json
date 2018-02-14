@@ -1,4 +1,5 @@
 {
+  "defaultSeverity": "warning",
   "extends": ["tslint:latest", "tslint-config-prettier"],
   "rules": {
     "array-type": false,

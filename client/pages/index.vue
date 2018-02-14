@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import { NuxtContext } from 'nuxt';
+import Vue from 'vue';
 
 import TheCatList from '../components/TheCatList.vue';
 

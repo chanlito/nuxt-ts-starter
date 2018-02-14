@@ -10,8 +10,9 @@
     "module": "es2015"
   },
   "include": [
-    "**/*.ts",
     "**/*.js",
+    "**/*.ts",
+    "**/*.vue",
     "../typings"
   ]
 }
