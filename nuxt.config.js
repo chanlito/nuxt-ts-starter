@@ -22,7 +22,11 @@ module.exports = {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/vuetify/dist/vuetify.min.css'
+      }
       // {
       //   rel: 'stylesheet',
       //   href: 'https://use.fontawesome.com/releases/v5.0.4/css/all.css'
@@ -81,7 +85,7 @@ module.exports = {
     [
       'nuxtjs-extensions/vuetify',
       {
-        css: true,
+        css: false,
         theme: {
           primary: '#3f51b5',
           secondary: '#757de8',
