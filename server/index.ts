@@ -5,7 +5,7 @@ import * as express from 'express';
 import { Builder, Nuxt } from 'nuxt';
 import { resolve } from 'path';
 
-import catRoute from './routes/cat.route';
+import catRoutes from './routes/cat.routes';
 
 const { NODE_ENV = 'development', PORT = '1337' } = process.env;
 const dev = NODE_ENV !== 'production';
@@ -15,7 +15,7 @@ const dev = NODE_ENV !== 'production';
   const nuxt = new Nuxt({ ...require(resolve('.', 'nuxt.config.js')), dev });
 
   app.use(compression());
-  app.use('/api', catRoute);
+  app.use('/api', catRoutes);
 
   if (dev) await new Builder(nuxt).build();
   app.use(nuxt.render);
