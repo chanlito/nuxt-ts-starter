@@ -23,21 +23,12 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://unpkg.com/vuetify@next/dist/vuetify.min.css'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.0.4/css/all.css'
-      }
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://use.fontawesome.com/releases/v5.0.4/css/all.css'
+      // }
     ],
-    script: [
-      /* {
-        defer: 'defer',
-        src: 'https://use.fontawesome.com/releases/v5.0.6/js/all.js'
-      } */
-    ]
+    script: []
   },
   /**
    * Customize application loading bar
@@ -60,11 +51,12 @@ module.exports = {
     // analyze: true,
     maxChunkSize: 300000,
     vendor: [
-      'vuetify',
       'nuxt-class-component',
+      'vee-validate',
       'vue-class-component',
       'vue-property-decorator',
-      'vuex-class'
+      'vuex-class',
+      'vuetify'
     ]
   },
   /**
@@ -85,10 +77,11 @@ module.exports = {
         tslint: resolve(__dirname, 'tslint.json')
       }
     ],
+    ['nuxtjs-extensions/vee-validate'],
     [
       'nuxtjs-extensions/vuetify',
       {
-        css: false,
+        css: true,
         theme: {
           primary: '#3f51b5',
           secondary: '#757de8',
