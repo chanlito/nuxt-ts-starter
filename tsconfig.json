@@ -6,7 +6,8 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "strict": true
+    "strict": true,
+    "pretty": true
   },
   "exclude": [
     "build",

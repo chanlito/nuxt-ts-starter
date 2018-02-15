@@ -22,6 +22,7 @@
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
     "express-promise-router": "^3.0.1",
+    "express-router-helper": "^1.0.1",
     "nuxt": "^1.3.0",
     "nuxtjs-extensions": "^1.5.0",
     "rimraf": "^2.6.2",
