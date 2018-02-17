@@ -11,7 +11,7 @@
     "build:server": "tsc -p server",
     "clean": "rimraf build",
     "dev": "cross-env NODE_ENV=development nodemon",
-    "start": "cross-env NODE_ENV=production node build/server"
+    "start": "cross-env NODE_ENV=production node build/server/main"
   },
   "dependencies": {
     "@nestjs/common": "^4.6.3",
