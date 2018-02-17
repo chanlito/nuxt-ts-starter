@@ -1,7 +1,8 @@
-import { Request, Response, Router } from 'express';
+import { Controller, Get } from '@nestjs/common';
 
-export async function getAllCats(req: Request, res: Response) {
-  res.json([
+@Controller('cats')
+export class CatController {
+  private readonly cats = [
     {
       id: 1,
       name: 'Tom',
@@ -27,5 +28,10 @@ export async function getAllCats(req: Request, res: Response) {
       name: 'Tobi',
       color: 'white'
     }
-  ]);
+  ];
+
+  @Get()
+  async getCatList() {
+    return this.cats;
+  }
 }

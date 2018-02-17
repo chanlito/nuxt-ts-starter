@@ -13,21 +13,18 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { Component, Prop, Vue } from 'nuxtjs-extensions';
 
-export default Vue.extend({
-  data() {
-    return {
-      name: ''
-    };
-  },
-  methods: {
-    submit() {
-      const r = (this as any).$validator.validateAll();
-    },
-    clear() {
-      this.name = ''
-    }
+@Component
+export default class extends Vue {
+  name: string = '';
+
+  submit() {
+    const r = this.$validator.validateAll();
   }
-});
+
+  clear() {
+    this.name = '';
+  }
+}
 </script>

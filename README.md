@@ -1,14 +1,29 @@
 # Nuxt TS Starter
 
-We love using Nuxt & Typescript 💚💙
+Build awesome SSR web application with Nuxt 💚 & Nest 😻
 
 ---
 
-## How to setup?
+## Usage
 
-`npm install`
+* Setup
 
-`npm run dev` or `npm start`
+```bash
+npm install
+```
+
+* Development
+
+```bash
+npm run dev
+```
+
+* Production
+
+```bash
+npm run build
+npm start
+```
 
 ---
 

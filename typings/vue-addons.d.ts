@@ -1,8 +1,11 @@
 import { NuxtContext } from 'nuxt';
+import { Validator } from 'vee-validate';
 import Vue from 'vue';
 
 declare module 'vue/types/vue' {
-  interface Vue {}
+  interface Vue {
+    $validator: Validator;
+  }
 }
 
 declare module 'vue/types/options' {
