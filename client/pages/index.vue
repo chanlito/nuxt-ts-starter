@@ -1,25 +1,29 @@
 <template>
   <div>
-    <the-cat-list :cats="cats" />
+    <the-user-list :users="users" />
     <the-test-form />
   </div>
 </template>
 
 <script lang="ts">
 import { NuxtContext } from 'nuxt';
-import Vue from 'vue';
+import { Component, Vue } from 'nuxtjs-extensions';
 
-import TheCatList from '../components/TheCatList.vue';
 import TheTestForm from '../components/TheTestForm.vue';
+import TheUserList from '../components/TheUserList.vue';
 
-export default Vue.extend({
+import { FetchUsersResponse } from '../../server/app/user/user.interface';
+
+@Component({
   components: {
-    TheCatList,
+    TheUserList,
     TheTestForm
-  },
-  async asyncData({ app }: NuxtContext) {
-    const cats = await app.$axios.$get('/api/cats');
-    return { cats };
   }
-});
+})
+export default class extends Vue {
+  async asyncData({ app }: NuxtContext) {
+    const { results } = await app.$axios.$get('/api/users') as FetchUsersResponse;
+    return { users: results };
+  }
+}
 </script>

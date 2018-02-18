@@ -74,6 +74,8 @@ module.exports = {
     ['@nuxtjs/dotenv', { path: resolve('.') }],
     ['@nuxtjs/axios'],
     ['@nuxtjs/proxy'],
+    ['nuxtjs-extensions/filters'],
+    ['nuxtjs-extensions/vee-validate'],
     [
       'nuxtjs-extensions/typescript',
       {
@@ -81,7 +83,6 @@ module.exports = {
         tslint: resolve(__dirname, 'tslint.json')
       }
     ],
-    ['nuxtjs-extensions/vee-validate'],
     [
       'nuxtjs-extensions/vuetify',
       {
