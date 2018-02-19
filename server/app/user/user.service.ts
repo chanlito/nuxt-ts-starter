@@ -1,7 +1,7 @@
 import { Component } from '@nestjs/common';
 import axios from 'axios';
 
-import { FetchUsersOptions, FetchUsersResponse } from './user.interface';
+import { FetchUsersOptions, FetchUsersResponse } from './user.interfaces';
 
 @Component()
 export class UserService {

@@ -21,7 +21,7 @@
 <script lang="ts">
 import { NuxtContext } from 'nuxt';
 import { Component, Prop, Vue } from 'nuxtjs-extensions';
-import { FetchUsersResult } from '../../server/app/user/user.interface';
+import { FetchUsersResult } from '../../server/app/user/user.interfaces';
 
 @Component
 export default class extends Vue {

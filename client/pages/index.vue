@@ -12,7 +12,7 @@ import { Component, Vue } from 'nuxtjs-extensions';
 import TheTestForm from '../components/TheTestForm.vue';
 import TheUserList from '../components/TheUserList.vue';
 
-import { FetchUsersResponse } from '../../server/app/user/user.interface';
+import { FetchUsersResponse } from '../../server/app/user/user.interfaces';
 
 @Component({
   components: {
