@@ -56,7 +56,7 @@
     ],
     "ext": "js ts",
     "ignore": [],
-    "exec": "ts-node --type-check --project server server/main"
+    "exec": "ts-node --type-check --project server/tsconfig.json server/main.ts"
   },
   "eslintConfig": {
     "extends": [
