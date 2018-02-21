@@ -31,7 +31,9 @@ declare module 'nuxt' {
 
   export interface NuxtContext<S = any> {
     app: NuxtApp;
+    /** @deprecated use process.client instead. */
     isClient: boolean;
+    /** @deprecated use process.server instead. */
     isServer: boolean;
     isStatic: boolean;
     isDev: boolean;
