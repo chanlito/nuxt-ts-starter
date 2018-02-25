@@ -8,28 +8,45 @@ import { resolve } from 'path';
 import { AppModule } from './app/app.module';
 import { NuxtFactory } from './util';
 
-const { NODE_ENV = 'development', PORT = '1337' } = process.env;
-const nuxtConfig = require(resolve('.', 'nuxt.config.js'));
+(async () => {
+  const { NODE_ENV = 'development', PORT = '1337' } = process.env;
 
-(async function bootstrap() {
+  /**
+   * Create a Nest application.
+   */
   const app: INestApplication = await NestFactory.create(AppModule, {
     bodyParser: true,
     cors: true
   });
+
+  /**
+   * Create a Nuxt application.
+   */
   const nuxt = await NuxtFactory.create({
-    ...nuxtConfig,
+    ...require(resolve('.', 'nuxt.config.js')),
     dev: NODE_ENV !== 'production'
   });
 
+  /**
+   * Set a global prefix for rest apis.
+   */
+  app.setGlobalPrefix('api');
+
+  /**
+   * Apply some express middlewares
+   */
   app.use(compression());
-  app.setGlobalPrefix('/api');
 
-  await app.listen(PORT).then(
-    _ => app.use(nuxt.render),
-    e => {
-      console.error(e);
-      process.exit(1);
-    }
-  );
-})();
+  /**
+   * Start Nest application.
+   */
+  await app.listen(PORT);
 
+  /**
+   * Render Nuxt application.
+   */
+  app.use(nuxt.render);
+})().catch(e => {
+  console.error(e);
+  process.exit(1);
+});
