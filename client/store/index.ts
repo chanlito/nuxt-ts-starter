@@ -3,16 +3,31 @@ import { ActionContext, ActionTree, MutationTree } from 'vuex';
 
 import { SET_IP } from '../util/mutation-types';
 
+/**
+ * Root State
+ */
 export const state = (): State => ({
   ip: null
 });
 
+export interface State {
+  ip: string | null;
+}
+
+export interface RootState extends State {}
+
+/**
+ * Root Mutations
+ */
 export const mutations: MutationTree<State> = {
   [SET_IP](state, payload) {
     state.ip = payload;
   }
 };
 
+/**
+ * Root Actions
+ */
 export const actions: RootActionTree<State, RootState> = {
   async nuxtServerInit(
     { commit }: ActionContext<State, RootState>,
@@ -26,12 +41,6 @@ export const actions: RootActionTree<State, RootState> = {
     }
   }
 };
-
-export type RootState = State;
-
-export interface State {
-  ip: string | null;
-}
 
 export interface RootActionTree<S, R> extends ActionTree<S, R> {
   nuxtServerInit(
