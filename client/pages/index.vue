@@ -1,7 +1,21 @@
 <template>
-  <div>
-    <the-user-list :users="users" />
-  </div>
+  <v-container class="ma-0 pa-0">
+    <v-layout>
+      <v-flex class="ml-2 mr-2">
+        <v-btn block
+               color="accent"
+               nuxt
+               to="/about">
+          Go to About Page
+        </v-btn>
+      </v-flex>
+    </v-layout>
+    <v-layout>
+      <v-flex>
+        <the-user-list :users="users" />
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script lang="ts">

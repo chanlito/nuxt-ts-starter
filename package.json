@@ -48,6 +48,8 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.3.0",
     "nodemon": "^1.17.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "ts-node": "^5.0.1",
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.9.0"
@@ -64,7 +66,7 @@
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
-      "plugin:vue/essential"
+      "plugin:vue/recommended"
     ],
     "env": {
       "node": true,

@@ -21,9 +21,9 @@ module.exports = {
         content: 'We love using Nuxt & Typescript 💚💙'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
-    script: []
+    link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]
   },
+  css: ['~/assets/styles/app.styl', '~/assets/styles/main.styl'],
   /**
    * Customize application loading bar
    */
@@ -62,12 +62,7 @@ module.exports = {
    */
   modules: [
     ['@nuxtjs/dotenv', { path: resolve('.') }],
-    [
-      '@nuxtjs/axios',
-      {
-        baseURL: 'https://randomuser.me/api/'
-      }
-    ],
+    ['@nuxtjs/axios'],
     ['@nuxtjs/proxy'],
     ['nuxtjs-extensions/filters'],
     ['nuxtjs-extensions/vee-validate'],
@@ -81,7 +76,7 @@ module.exports = {
     [
       'nuxtjs-extensions/vuetify',
       {
-        css: true,
+        css: false,
         theme: {
           primary: '#3f51b5',
           secondary: '#757de8',
