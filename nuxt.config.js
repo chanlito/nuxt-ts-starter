@@ -21,17 +21,7 @@ module.exports = {
         content: 'We love using Nuxt & Typescript 💚💙'
       }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://unpkg.com/vuetify/dist/vuetify.min.css'
-      }
-      // {
-      //   rel: 'stylesheet',
-      //   href: 'https://use.fontawesome.com/releases/v5.0.4/css/all.css'
-      // }
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
     script: []
   },
   /**
@@ -72,7 +62,12 @@ module.exports = {
    */
   modules: [
     ['@nuxtjs/dotenv', { path: resolve('.') }],
-    ['@nuxtjs/axios'],
+    [
+      '@nuxtjs/axios',
+      {
+        baseURL: 'https://randomuser.me/api/'
+      }
+    ],
     ['@nuxtjs/proxy'],
     ['nuxtjs-extensions/filters'],
     ['nuxtjs-extensions/vee-validate'],
@@ -86,7 +81,7 @@ module.exports = {
     [
       'nuxtjs-extensions/vuetify',
       {
-        css: false,
+        css: true,
         theme: {
           primary: '#3f51b5',
           secondary: '#757de8',
@@ -98,11 +93,5 @@ module.exports = {
         }
       }
     ]
-  ],
-  /**
-   * Specify configuration for @nuxtjs/axios module
-   */
-  axios: {
-    // proxy: true
-  }
+  ]
 };
