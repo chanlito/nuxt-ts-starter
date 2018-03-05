@@ -7,8 +7,7 @@
       "dom",
       "es2015"
     ],
-    "module": "es2015",
-    "strictPropertyInitialization": false
+    "module": "es2015"
   },
   "include": [
     "**/*.js",
