@@ -20,11 +20,10 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxtjs-extensions';
-import { FetchUsersResult } from '../../server/app/user/user.interfaces';
 
 @Component
 export default class extends Vue {
   @Prop({ type: Array, required: true })
-  users: FetchUsersResult[];
+  users: any;
 }
 </script>

@@ -3,7 +3,6 @@
     <v-toolbar app
                color="primary"
                dark>
-      <v-toolbar-side-icon></v-toolbar-side-icon>
       <v-toolbar-title>Nuxt TS Starter</v-toolbar-title>
       <v-spacer/>
     </v-toolbar>

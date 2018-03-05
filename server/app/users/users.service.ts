@@ -1,10 +1,10 @@
 import { Component } from '@nestjs/common';
 import axios from 'axios';
 
-import { FetchUsersOptions, FetchUsersResponse } from './user.interfaces';
+import { FetchUsersOptions, FetchUsersResponse } from './users.interfaces';
 
 @Component()
-export class UserService {
+export class UsersService {
   private readonly URL = 'https://randomuser.me/api/';
 
   async fetchUsers(options: FetchUsersOptions = {}) {
