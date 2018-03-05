@@ -1,8 +1,5 @@
 # build files
-.nuxt
 build
-dist
-server/build
 
 # enviroment variables
 .env
@@ -12,3 +9,6 @@ node_modules
 
 # logs
 npm-debug.log
+
+# misc
+.DS_Store
